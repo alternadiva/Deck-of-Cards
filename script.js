@@ -3,6 +3,8 @@ let values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 let deck = [];
 let deckDiv = document.getElementById("deck");
 
+
+
 function getDeck() {
     let deck = [];
     for (let i = 0; i < suits.length; i++) {
@@ -31,28 +33,40 @@ function shuffle() {
 
 
 function renderDeck() {
-    deckDiv.innerHTML = "";
     for (let i = 0; i < deck.length; i++) {
         let card = document.createElement("div");
-        let icon = "";
+        let cardValue1 = document.createElement("p");
+        let cardSuit1 = document.createElement("p");
+        let cardSuit2 = document.createElement("p");
+        let cardValue2 = document.createElement("p");
+        let icon;
         
         if (deck[i].suit == "spades") {
             icon = "&spades;";
         }
-        else if (deck[i].suit == "diamons") {
+        else if (deck[i].suit == "diamonds") {
             icon = "&diams;";
+            card.style.color = "red";
         }
         else if (deck[i].suit == "clubs") {
             icon = "&clubs;";
         }
         else {
             icon = "&hearts;";
+            card.style.color = "red";
         }
 
-        card.innerHTML = (deck[i].value + "" + icon) + (deck[i].value + "" + icon);
+        cardValue1.innerHTML = deck[i].value;
+        cardSuit1.innerHTML = icon;
+        cardSuit2.innerHTML = icon;
+        cardValue2.innerHTML = deck[i].value;
         card.classList.add("card");
         card.classList.add(deck[i].suit);
 
+        card.appendChild(cardValue1);
+        card.appendChild(cardSuit1);
+        card.appendChild(cardSuit2);
+        card.appendChild(cardValue2);
         deckDiv.appendChild(card);
     }
 }
