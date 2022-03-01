@@ -1,6 +1,6 @@
 ## ♠️ ♦️ Deck of Cards ♥️ ♣️
 
-#### The purpose of this app is to create a shuffled deck of playing cards facing downwards. Top card can be flipped and placed to a new deck. 🃏 
+#### The purpose of this app is to create a shuffled deck of playing cards facing downwards. Top card can be flipped and placed on top of a new deck. 🃏 
 
 - [x] Create a deck object
 - [x] Shuffle deck on window load
