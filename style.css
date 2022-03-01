@@ -1,9 +1,14 @@
+body {
+  background-color: rgb(243, 243, 243);
+  margin: 50px 100px 50px 100px;
+}
+
 #deck {
   display: inline-grid;
   width: 100%;
-  grid-template-columns: repeat(10, 1fr);
-  column-gap: 20px;
-  row-gap: 10px;
+  grid-template-columns: repeat(8, 1fr);
+  column-gap: 40px;
+  row-gap: 40px;
   perspective: 1000px;
 }
 
@@ -11,23 +16,21 @@
   cursor: pointer;
   width: 100px;
   height: 150px;
-  border: 1px solid rgba(0, 0, 0, 0.158);
   border-radius: 10px;
+  box-shadow: 3px 3px 7px rgba(119, 46, 46, 0.2);
   position: relative;
   transform-style: preserve-3d;
   transform: scale(1);
-  transition: transform 0.5s;
+  transition: transform 0.6s;
 }
 
 .cards:active {
-  transform: scale(0.99);
-  transition: transform 0.5s;
+  transform: scale(0.6);
 }
 
 .front-face {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  background-color: white;
+  border-radius: inherit;
   position: absolute;
   backface-visibility: hidden;
   transform: rotateY(180deg);
