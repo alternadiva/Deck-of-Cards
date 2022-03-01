@@ -74,6 +74,13 @@ function renderDeck() {
 
 function flip() {
   this.classList.add("flip");
+  this.addEventListener("click", unFlip);
+}
+
+function unFlip() {
+  this.classList.remove("flip");
+  this.removeEventListener("click", unFlip);
+  this.addEventListener("click", flip);
 }
 
 function start() {
