@@ -6,7 +6,7 @@
 - [x] Shuffle deck on window load
 - [x] Render appropriate HTML entity icons to suit-value pairs
 - [ ] Style deck and cards
-- [ ] Set card perspective and backface visibility
-- [ ] Flip cards on click
+- [x] Set card perspective and backface visibility
+- [x] Flip cards on click
 - [ ] Stack the deck of face-down cards
 - [ ] Collect flipped cards in a new deck
