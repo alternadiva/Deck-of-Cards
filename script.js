@@ -3,6 +3,8 @@ let values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 let deck = [];
 let deckDiv = document.getElementById("deck");
 
+window.addEventListener("load", start);
+
 function getDeck() {
   let deck = [];
   for (let i = 0; i < suits.length; i++) {
@@ -67,6 +69,11 @@ function renderDeck() {
     card.append(backFace, frontFace);
     deckDiv.appendChild(card);
   }
+  deckDiv.childNodes.forEach((card) => card.addEventListener("click", flip));
+}
+
+function flip() {
+  this.classList.add("flip");
 }
 
 function start() {
@@ -74,5 +81,3 @@ function start() {
   shuffle();
   renderDeck();
 }
-
-window.addEventListener("load", start);

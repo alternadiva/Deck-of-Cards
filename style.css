@@ -62,3 +62,7 @@
   position: absolute;
   backface-visibility: hidden;
 }
+
+.flip {
+  transform: rotateY(180deg);
+}
